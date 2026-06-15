@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lawren Henderson — Content Strategist · Writer · Storyteller</title>
+  <meta name="description" content="Portfolio of Lawren Henderson, content strategist and writer specializing in B2B tech, digital video, and telehealth." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --tc: #C4622D;
+      --tc-light: #F7EDE6;
+      --tc-border: #E8C4AD;
+      --ink: #1A1A1A;
+      --ink-2: #444444;
+      --ink-3: #888888;
+      --cream: #FDFAF7;
+      --cream-2: #F5F0E8;
+      --cream-3: #EDE6D8;
+      --border: #E0D8CC;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: var(--ink);
+      background: var(--cream);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    /* ── NAV ── */
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 1.5rem;
+      border-bottom: 0.5px solid var(--border);
+      position: sticky;
+      top: 0;
+      background: var(--cream);
+      z-index: 100;
+    }
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .nav-links { display: flex; gap: 1.5rem; }
+    .nav-links a {
+      font-size: 13px;
+      color: var(--ink-3);
+      text-decoration: none;
+      padding-bottom: 2px;
+      border-bottom: 1.5px solid transparent;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .nav-links a:hover { color: var(--tc); border-bottom-color: var(--tc); }
+    .nav-links a.active { color: var(--tc); border-bottom-color: var(--tc); }
+
+    /* ── SECTION LABEL ── */
+    .section-label {
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-3);
+      padding: 0.75rem 1.5rem 0.5rem;
+      border-top: 0.5px solid var(--border);
+    }
+
+    /* ── HERO ── */
+    #hero { border-bottom: 0.5px solid var(--border); }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 240px;
+    }
+    .hero-left {
+      padding: 2rem 1.5rem;
+      border-right: 0.5px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .hero-right {
+      padding: 2rem 1.5rem;
+      background: var(--cream-2);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    .eyebrow {
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink-3);
+      margin-bottom: 0.75rem;
+    }
+    .hero-headline {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+    .hero-headline em { font-style: italic; color: var(--tc); }
+    .hero-tagline { font-size: 13px; color: var(--ink-2); line-height: 1.6; }
+    .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    .stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      color: var(--tc);
+      display: block;
+    }
+    .stat-label { font-size: 11px; color: var(--ink-3); display: block; margin-top: 3px; line-height: 1.4; }
+
+    /* ── ABOUT ── */
+    #about { border-bottom: 0.5px solid var(--border); }
+    .about-top {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      border-bottom: 0.5px solid var(--border);
+    }
+    .about-photo {
+      border-right: 0.5px solid var(--border);
+      background: var(--cream-2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 1.5rem;
+      min-height: 240px;
+    }
+    /* ── REPLACE THIS WITH YOUR ACTUAL HEADSHOT ── */
+    /* To add your headshot: replace the .photo-placeholder div with:
+       <img src="images/headshot.jpg" alt="Lawren Henderson" style="width:120px;height:120px;border-radius:50%;object-fit:cover;" />
+    */
+    .photo-placeholder {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: var(--cream-3);
+      border: 0.5px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--ink-3);
+      font-size: 13px;
+      text-align: center;
+      line-height: 1.4;
+      padding: 1rem;
+    }
+    .about-bio { padding: 1.75rem 1.5rem; }
+    .about-bio h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      margin-bottom: 1rem;
+    }
+    .about-bio p {
+      font-size: 13px;
+      color: var(--ink-2);
+      line-height: 1.8;
+      margin-bottom: 0.9rem;
+    }
+    .about-bio p:last-child { margin-bottom: 0; }
+
+    /* ── TRAVEL PHOTOS ── */
+    .travel-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+    .travel-photo {
+      aspect-ratio: 4/3;
+      position: relative;
+      overflow: hidden;
+      border-right: 0.5px solid var(--border);
+    }
+    .travel-photo:last-child { border-right: none; }
+    /* ── REPLACE THESE WITH YOUR ACTUAL TRAVEL PHOTOS ── */
+    /* To add photos: replace the .travel-placeholder div with:
+       <img src="images/machu-picchu.jpg" alt="Machu Picchu" style="width:100%;height:100%;object-fit:cover;" />
+    */
+    .travel-placeholder {
+      width: 100%;
+      height: 100%;
+      background: var(--cream-2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--ink-3);
+      font-size: 12px;
+    }
+    .travel-label {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 0.5rem 0.75rem;
+      background: linear-gradient(transparent, rgba(26,26,26,0.5));
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: white;
+      text-align: center;
+    }
+
+    /* ── SKILLS ── */
+    #skills { border-bottom: 0.5px solid var(--border); }
+    .skills-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; }
+    .skills-col { padding: 1.25rem 1.5rem; }
+    .skills-col:not(:last-child) { border-right: 0.5px solid var(--border); }
+    .skills-heading {
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-3);
+      margin-bottom: 0.75rem;
+    }
+    .pills { display: flex; flex-wrap: wrap; gap: 6px; }
+    .pill {
+      font-size: 12px;
+      padding: 4px 12px;
+      border-radius: 20px;
+      border: 0.5px solid var(--border);
+      color: var(--ink-2);
+      background: var(--cream);
+      transition: border-color 0.15s, color 0.15s;
+    }
+    .pill:hover { border-color: var(--tc); color: var(--tc); }
+
+    /* ── WORK ── */
+    #work { }
+    .filter-bar { border-bottom: 0.5px solid var(--border); }
+    .filter-row {
+      display: flex;
+      align-items: center;
+      border-bottom: 0.5px solid var(--border);
+    }
+    .filter-row:last-child { border-bottom: none; }
+    .filter-label {
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-3);
+      padding: 0.6rem 1rem;
+      border-right: 0.5px solid var(--border);
+      white-space: nowrap;
+      min-width: 110px;
+    }
+    .filter-tags { display: flex; gap: 6px; padding: 0.6rem 1rem; flex-wrap: wrap; }
+    .tag {
+      font-size: 12px;
+      padding: 4px 12px;
+      border-radius: 20px;
+      border: 0.5px solid var(--border);
+      color: var(--ink-2);
+      cursor: pointer;
+      background: var(--cream);
+      transition: all 0.15s;
+    }
+    .tag:hover, .tag.active { background: var(--tc); color: white; border-color: var(--tc); }
+    .work-count { font-size: 11px; color: var(--ink-3); padding: 0.5rem 1.5rem; }
+    .work-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border-bottom: 0.5px solid var(--border);
+    }
+    .work-card {
+      padding: 1.25rem 1.5rem;
+      border-right: 0.5px solid var(--border);
+      border-bottom: 0.5px solid var(--border);
+      transition: background 0.15s;
+    }
+    .work-card:nth-child(2n) { border-right: none; }
+    .work-card:hover { background: var(--cream-2); }
+    .card-meta { display: flex; gap: 6px; margin-bottom: 8px; flex-wrap: wrap; }
+    .type-badge {
+      font-size: 10px;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: 4px;
+      background: var(--tc-light);
+      color: var(--tc);
+      border: 0.5px solid var(--tc-border);
+    }
+    .ind-badge {
+      font-size: 10px;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: 4px;
+      background: var(--cream-2);
+      color: var(--ink-3);
+      border: 0.5px solid var(--border);
+    }
+    .card-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 14px;
+      line-height: 1.3;
+      margin-bottom: 4px;
+      color: var(--ink);
+    }
+    .card-client { font-size: 11px; color: var(--ink-3); margin-bottom: 8px; }
+    .card-blurb { font-size: 12px; color: var(--ink-2); line-height: 1.55; margin-bottom: 10px; }
+    .card-link {
+      font-size: 12px;
+      color: var(--tc);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .card-link:hover { text-decoration: underline; }
+    .no-results {
+      padding: 3rem 1.5rem;
+      font-size: 13px;
+      color: var(--ink-3);
+      grid-column: 1 / -1;
+      text-align: center;
+    }
+
+    /* ── TESTIMONIALS ── */
+    #testimonials { border-bottom: 0.5px solid var(--border); }
+    .testimonials-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; }
+    .tcard {
+      padding: 1.5rem;
+      border-right: 0.5px solid var(--border);
+    }
+    .tcard:last-child { border-right: none; }
+    .tquote-mark {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px;
+      color: var(--tc);
+      line-height: 1;
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+    .tquote {
+      font-family: 'Playfair Display', serif;
+      font-size: 13px;
+      font-style: italic;
+      line-height: 1.7;
+      margin-bottom: 1rem;
+      color: var(--ink-2);
+    }
+    .tname {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--ink);
+      display: block;
+      margin-bottom: 2px;
+    }
+    .trole { font-size: 11px; color: var(--ink-3); display: block; }
+
+    /* ── CONTACT ── */
+    #contact { border-bottom: 0.5px solid var(--border); }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; }
+    .contact-left {
+      padding: 2.5rem 1.5rem;
+      background: var(--tc);
+      border-right: 0.5px solid var(--border);
+    }
+    .contact-left h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 30px;
+      line-height: 1.15;
+      color: white;
+      margin-bottom: 0.75rem;
+    }
+    .contact-left h2 em { font-style: italic; opacity: 0.85; }
+    .contact-left p { font-size: 13px; color: rgba(255,255,255,0.8); line-height: 1.7; }
+    .avail-pills { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 1.25rem; }
+    .avail-pill {
+      font-size: 11px;
+      padding: 4px 12px;
+      border-radius: 20px;
+      border: 0.5px solid rgba(255,255,255,0.4);
+      color: white;
+      background: rgba(255,255,255,0.15);
+    }
+    .contact-right {
+      padding: 2.5rem 1.5rem;
+      background: var(--cream-2);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1rem;
+    }
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--ink);
+      padding: 0.85rem 1rem;
+      border: 0.5px solid var(--border);
+      border-radius: 6px;
+      background: var(--cream);
+      transition: border-color 0.15s, color 0.15s;
+      cursor: pointer;
+    }
+    .contact-link:hover { border-color: var(--tc); color: var(--tc); }
+    .contact-link-icon { font-size: 20px; color: var(--ink-3); flex-shrink: 0; }
+    .contact-link-label { font-size: 13px; font-weight: 500; display: block; }
+    .contact-link-sub { font-size: 11px; color: var(--ink-3); margin-top: 1px; display: block; }
+    .copy-confirm { font-size: 11px; color: var(--tc); min-height: 16px; display: block; margin-top: 1px; }
+
+    /* ── FOOTER ── */
+    footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 1.5rem;
+      border-top: 0.5px solid var(--border);
+    }
+    .footer-copy { font-size: 11px; color: var(--ink-3); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .hero-left { border-right: none; border-bottom: 0.5px solid var(--border); }
+      .about-top { grid-template-columns: 1fr; }
+      .about-photo { border-right: none; border-bottom: 0.5px solid var(--border); min-height: 160px; }
+      .travel-grid { grid-template-columns: 1fr 1fr; }
+      .skills-grid { grid-template-columns: 1fr; }
+      .skills-col:not(:last-child) { border-right: none; border-bottom: 0.5px solid var(--border); }
+      .work-grid { grid-template-columns: 1fr; }
+      .work-card:nth-child(2n) { border-right: 0.5px solid var(--border); }
+      .work-card { border-right: none !important; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .tcard { border-right: none; border-bottom: 0.5px solid var(--border); }
+      .contact-grid { grid-template-columns: 1fr; }
+      .contact-left { border-right: none; border-bottom: 0.5px solid var(--border); }
+      .nav-links { gap: 1rem; }
+      .nav-links a { font-size: 12px; }
+      .stats-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <a href="#hero" class="nav-logo">Lawren Henderson</a>
+    <div class="nav-links">
+      <a href="#about" data-section="about">About</a>
+      <a href="#skills" data-section="skills">Skills</a>
+      <a href="#work" data-section="work">Work</a>
+      <a href="#testimonials" data-section="testimonials">Testimonials</a>
+      <a href="#contact" data-section="contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-grid">
+      <div class="hero-left">
+        <div>
+          <p class="eyebrow">Content Strategist · Writer · Storyteller</p>
+          <h1 class="hero-headline">Translating complex<br>ideas into<br><em>human stories.</em></h1>
+        </div>
+        <p class="hero-tagline">15+ years of content strategy, B2B writing, and digital video — across industries, formats, and audiences.</p>
+      </div>
+      <div class="hero-right">
+        <div class="stats-grid">
+          <div>
+            <span class="stat-num">3</span>
+            <span class="stat-label">Content marketing agencies served</span>
+          </div>
+          <div>
+            <span class="stat-num">15+</span>
+            <span class="stat-label">Industries covered</span>
+          </div>
+          <div>
+            <span class="stat-num">30+</span>
+            <span class="stat-label">B2B tech companies</span>
+          </div>
+          <div>
+            <span class="stat-num">30M+</span>
+            <span class="stat-label">YouTube views produced</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <p class="section-label">About</p>
+    <div class="about-top">
+      <div class="about-photo">
+        <!-- REPLACE with your headshot:
+             <img src="images/headshot.jpg" alt="Lawren Henderson" style="width:120px;height:120px;border-radius:50%;object-fit:cover;" />
+        -->
+        <div class="photo-placeholder">Your headshot here</div>
+      </div>
+      <div class="about-bio">
+        <h2>Hi, I'm Lawren.</h2>
+        <p>I started my career producing unscripted television. Duck Dynasty, Shark Week, Celebrity Wife Swap. The work was exciting: craft a story that demanded attention. In 2016, MarketScale pinged me on LinkedIn and pulled me into content marketing. I never looked back.</p>
+        <p>These days I specialize in the stories other people can't figure out how to tell. The ones buried inside complex technology, clinical research, or a product that's genuinely hard to explain. I've written for cybersecurity firms, ERP platforms, telehealth companies, and YouTube itself. I've also written a feature-length screenplay that went on to be independently produced.</p>
+        <p>I made the move from Los Angeles to San Juan, Puerto Rico. I wanted a new adventure, and San Juan called like a siren. When I'm not writing I'm traveling, sometimes solo, sometimes with friends, always looking for the kind of experience that sharpens me into a better storyteller.</p>
+      </div>
+    </div>
+    <div class="travel-grid">
+      <!-- REPLACE each .travel-placeholder with your actual photo:
+           <img src="images/machu-picchu.jpg" alt="Machu Picchu" style="width:100%;height:100%;object-fit:cover;" />
+      -->
+      <div class="travel-photo">
+        <div class="travel-placeholder">Your photo</div>
+        <span class="travel-label">Machu Picchu</span>
+      </div>
+      <div class="travel-photo">
+        <div class="travel-placeholder">Your photo</div>
+        <span class="travel-label">Taj Mahal</span>
+      </div>
+      <div class="travel-photo">
+        <div class="travel-placeholder">Your photo</div>
+        <span class="travel-label">Sahara Desert</span>
+      </div>
+      <div class="travel-photo">
+        <div class="travel-placeholder">Your photo</div>
+        <span class="travel-label">Great Wall of China</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <p class="section-label">Skills</p>
+    <div class="skills-grid">
+      <div class="skills-col">
+        <p class="skills-heading">Content &amp; Strategy</p>
+        <div class="pills">
+          <span class="pill">B2B Content Strategy</span>
+          <span class="pill">SEO &amp; GEO Optimization</span>
+          <span class="pill">Copywriting &amp; UX Copy</span>
+          <span class="pill">SME &amp; Executive Interviews</span>
+        </div>
+      </div>
+      <div class="skills-col">
+        <p class="skills-heading">Video &amp; Storytelling</p>
+        <div class="pills">
+          <span class="pill">End-to-End Video Production</span>
+          <span class="pill">Script Development</span>
+          <span class="pill">Video Editing</span>
+          <span class="pill">Talent &amp; Interview Direction</span>
+        </div>
+      </div>
+      <div class="skills-col">
+        <p class="skills-heading">Tools</p>
+        <div class="pills">
+          <span class="pill">Semrush &amp; Ahrefs</span>
+          <span class="pill">HubSpot</span>
+          <span class="pill">WordPress</span>
+          <span class="pill">Figma</span>
+          <span class="pill">Premiere Pro</span>
+          <span class="pill">ChatGPT · Claude · Gemini</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section id="work">
+    <div class="filter-bar">
+      <div class="filter-row">
+        <span class="filter-label">Content type</span>
+        <div class="filter-tags" id="type-tags">
+          <span class="tag active" data-type="all">All</span>
+          <span class="tag" data-type="article">Articles &amp; Blogs</span>
+          <span class="tag" data-type="longform">Long Form</span>
+          <span class="tag" data-type="casestudy">Case Study</span>
+          <span class="tag" data-type="video">Video</span>
+          <span class="tag" data-type="uxcopy">UX Copy</span>
+          <span class="tag" data-type="email">Email</span>
+          <span class="tag" data-type="webcopy">Web Copy</span>
+        </div>
+      </div>
+      <div class="filter-row">
+        <span class="filter-label">Industry</span>
+        <div class="filter-tags" id="industry-tags">
+          <span class="tag active" data-industry="all">All</span>
+          <span class="tag" data-industry="cloud">Cloud</span>
+          <span class="tag" data-industry="cyber">Cybersecurity</span>
+          <span class="tag" data-industry="erp">ERP / SaaS</span>
+          <span class="tag" data-industry="itm">IT Management</span>
+          <span class="tag" data-industry="telehealth">Telehealth</span>
+          <span class="tag" data-industry="video">Digital Video</span>
+          <span class="tag" data-industry="edtech">EdTech</span>
+        </div>
+      </div>
+    </div>
+    <p class="section-label" style="border-top:none; padding-top:0.75rem;">Selected work</p>
+    <p class="work-count" id="card-count"></p>
+
+    <div class="work-grid" id="work-grid">
+
+      <!-- VIDEOS -->
+      <div class="work-card" data-type="video" data-industry="video">
+        <div class="card-meta"><span class="type-badge">Video</span><span class="ind-badge">Digital Video</span></div>
+        <p class="card-title">Technoblade Never Dies</p>
+        <p class="card-client">Big Door Studios · YouTube</p>
+        <p class="card-blurb">A tribute to the late Minecraft legend Technoblade, tracing his rise, his iconic catchphrase, and the community that made him immortal.</p>
+        <a class="card-link" href="https://www.youtube.com/watch?v=R_fZjGm2OrM" target="_blank" rel="noopener">▶ Watch on YouTube</a>
+      </div>
+
+      <div class="work-card" data-type="video" data-industry="video">
+        <div class="card-meta"><span class="type-badge">Video</span><span class="ind-badge">Digital Video</span></div>
+        <p class="card-title">Celebrating The Mario Community &amp; 100 Billion Views</p>
+        <p class="card-client">Big Door Studios · YouTube</p>
+        <p class="card-blurb">A love letter to the global Super Mario creator community and the 100 billion views they collectively racked up on YouTube.</p>
+        <a class="card-link" href="https://www.youtube.com/watch?v=thA_T13Wnqo" target="_blank" rel="noopener">▶ Watch on YouTube</a>
+      </div>
+
+      <div class="work-card" data-type="video" data-industry="video">
+        <div class="card-meta"><span class="type-badge">Video</span><span class="ind-badge">Digital Video</span></div>
+        <p class="card-title">How Choreography Videos Got Their Groove</p>
+        <p class="card-client">Big Door Studios · YouTube Culture &amp; Trends</p>
+        <p class="card-blurb">Tracing the evolution of online dance choreography from webcam tutorials to a multi-billion-view global art form.</p>
+        <a class="card-link" href="https://www.youtube.com/watch?v=C-l7b_6T6Go" target="_blank" rel="noopener">▶ Watch on YouTube</a>
+      </div>
+
+      <div class="work-card" data-type="video" data-industry="video">
+        <div class="card-meta"><span class="type-badge">Video</span><span class="ind-badge">Digital Video</span></div>
+        <p class="card-title">I Was Bitten — Stiletto Snakes</p>
+        <p class="card-client">Discovery Channel</p>
+        <p class="card-blurb">An inside look at one of Africa's most dangerous and understudied snakes, whose unusual fangs make it impossible to safely handle.</p>
+        <a class="card-link" href="https://www.youtube.com/watch?v=VVB3Gh5wYm0" target="_blank" rel="noopener">▶ Watch on YouTube</a>
+      </div>
+
+      <!-- ARTICLES: CYBERSECURITY -->
+      <div class="work-card" data-type="article" data-industry="cyber">
+        <div class="card-meta"><span class="type-badge">Article</span><span class="ind-badge">Cybersecurity</span></div>
+        <p class="card-title">iOS App Security: A Developer's Guide</p>
+        <p class="card-client">Snyk</p>
+        <p class="card-blurb">A comprehensive developer guide to securing iOS applications against modern threats.</p>
+        <a class="card-link" href="https://snyk.io/articles/application-security/mobile-application-security/ios-appsec-guide/" target="_blank" rel="noopener">→ Read on Snyk</a>
+      </div>
+
+      <div class="work-card" data-type="article" data-industry="cyber">
+        <div class="card-meta"><span class="type-badge">Article</span><span class="ind-badge">Cybersecurity</span></div>
+        <p class="card-title">Securing the Future of AI-Generated Code</p>
+        <p class="card-client">Snyk</p>
+        <p class="card-blurb">A forward-looking piece on the unique security risks introduced by AI-generated code and how development teams can address them.</p>
+        <a class="card-link" href="https://snyk.io/blog/Securing-the-future-of-AI-generated-code/" target="_blank" rel="noopener">→ Read on Snyk</a>
+      </div>
+
+      <div class="work-card" data-type="article" data-industry="cyber">
+        <div class="card-meta"><span class="type-badge">Article</span><span class="ind-badge">Cybersecurity</span></div>
+        <p class="card-title">How to Prioritize Vulnerabilities Based on Risk</p>
+        <p class="card-client">Snyk</p>
+        <p class="card-blurb">A strategic guide helping security teams cut through alert noise and focus remediation on what actually matters.</p>
+        <a class="card-link" href="https://snyk.io/blog/prioritize-vulnerabilities-based-on-risk/" target="_blank" rel="noopener">→ Read on Snyk</a>
+      </div>
+
+      <!-- ARTICLES: ERP/SAAS -->
+      <div class="work-card" data-type="article" data-industry="erp">
+        <div class="card-meta"><span class="type-badge">Article</span><span class="ind-badge">ERP / SaaS</span></div>
+        <p class="card-title">How to End ETO Quote Mistakes and Save Your Margins</p>
+        <p class="card-client">Novobi</p>
+        <p class="card-blurb">A practical guide for manufacturers on eliminating costly quoting errors in engineer-to-order workflows.</p>
+        <a class="card-link" href="https://novobi.com/how-to-end-eto-quote-mistakes-and-save-your-margins/" target="_blank" rel="noopener">→ Read on Novobi</a>
+      </div>
+
+      <div class="work-card" data-type="article" data-industry="erp">
+        <div class="card-meta"><span class="type-badge">Article</span><span class="ind-badge">ERP / SaaS</span></div>
+        <p class="card-title">Taming BOM Chaos with Novobi's ETO Blueprint</p>
+        <p class="card-client">Novobi</p>
+        <p class="card-blurb">An explainer on how Novobi's ETO Blueprint helps manufacturers bring order to complex bill-of-materials management.</p>
+        <a class="card-link" href="https://novobi.com/taming-bom-chaos-with-novobis-eto-blueprint/" target="_blank" rel="noopener">→ Read on Novobi</a>
+      </div>
+
+      <div class="work-card" data-type="article" data-industry="erp">
+        <div class="card-meta"><span class="type-badge">Article</span><span class="ind-badge">ERP / SaaS</span></div>
+        <p class="card-title">Utility Network: The Missing Piece in Your SAP S/4HANA Migration</p>
+        <p class="card-client">ASUG</p>
+        <p class="card-blurb">A technical thought leadership piece on why utility network modernization should be part of any SAP S/4HANA migration strategy.</p>
+        <a class="card-link" href="https://www.asug.com/insights/utility-network-the-missing-piece-in-your-sap-s-4hana-migration" target="_blank" rel="noopener">→ Read on ASUG</a>
+      </div>
+
+      <!-- ARTICLES: IT MANAGEMENT -->
+      <div class="work-card" data-type="article" data-industry="itm">
+        <div class="card-meta"><span class="type-badge">Article</span><span class="ind-badge">IT Management</span></div>
+        <p class="card-title">Mac vs PC: Which Is Best for Your Business?</p>
+        <p class="card-client">NinjaOne</p>
+        <p class="card-blurb">A buyer's guide helping IT decision-makers weigh the real-world tradeoffs between Mac and PC in a business environment.</p>
+        <a class="card-link" href="https://www.ninjaone.com/blog/mac-vs-pc-which-one-is-best-for-your-business/" target="_blank" rel="noopener">→ Read on NinjaOne</a>
+      </div>
+
+      <div class="work-card" data-type="article" data-industry="itm">
+        <div class="card-meta"><span class="type-badge">Article</span><span class="ind-badge">IT Management</span></div>
+        <p class="card-title">Why Document Encryption Is Essential for Business Security</p>
+        <p class="card-client">Sdocs</p>
+        <p class="card-blurb">A business-focused explainer on why encryption is a non-negotiable for protecting sensitive documents at scale.</p>
+        <a class="card-link" href="https://www.sdocs.com/resources/blog/why-document-encryption-is-essential-for-business-security" target="_blank" rel="noopener">→ Read on Sdocs</a>
+      </div>
+
+      <div class="work-card" data-type="article" data-industry="itm">
+        <div class="card-meta"><span class="type-badge">Article</span><span class="ind-badge">IT Management</span></div>
+        <p class="card-title">How Document Automation Can Transform Your Team's Productivity</p>
+        <p class="card-client">Sdocs</p>
+        <p class="card-blurb">A practical piece on how document automation eliminates bottlenecks and frees teams to focus on higher-value work.</p>
+        <a class="card-link" href="https://www.sdocs.com/resources/blog/how-document-automation-can-transform-your-teams-productivity" target="_blank" rel="noopener">→ Read on Sdocs</a>
+      </div>
+
+      <!-- ARTICLES: TELEHEALTH -->
+      <div class="work-card" data-type="article" data-industry="telehealth">
+        <div class="card-meta"><span class="type-badge">Article</span><span class="ind-badge">Telehealth</span></div>
+        <p class="card-title">Understanding Parental Burnout and How to Cope</p>
+        <p class="card-client">Cerebral</p>
+        <p class="card-blurb">An empathetic, clinically grounded guide helping parents recognize and address burnout before it compounds.</p>
+        <a class="card-link" href="https://cerebral.com/blog/understanding-parental-burnout-and-how-to-cope" target="_blank" rel="noopener">→ Read on Cerebral</a>
+      </div>
+
+      <div class="work-card" data-type="article" data-industry="telehealth">
+        <div class="card-meta"><span class="type-badge">Article</span><span class="ind-badge">Telehealth</span></div>
+        <p class="card-title">5 Easy Ways to Relieve Stress</p>
+        <p class="card-client">Cerebral</p>
+        <p class="card-blurb">Accessible, evidence-informed strategies for managing everyday stress, written for a 500K+ patient telehealth audience.</p>
+        <a class="card-link" href="https://cerebral.com/blog/5-easy-ways-to-relieve-stress" target="_blank" rel="noopener">→ Read on Cerebral</a>
+      </div>
+
+      <div class="work-card" data-type="article" data-industry="telehealth">
+        <div class="card-meta"><span class="type-badge">Article</span><span class="ind-badge">Telehealth</span></div>
+        <p class="card-title">Do I Have ADHD?</p>
+        <p class="card-client">Cerebral</p>
+        <p class="card-blurb">A high-intent SEO article balancing clinical accuracy with accessible language for readers seeking answers about ADHD.</p>
+        <a class="card-link" href="https://cerebral.com/blog/do-i-have-adhd" target="_blank" rel="noopener">→ Read on Cerebral</a>
+      </div>
+
+      <div class="work-card" data-type="article" data-industry="telehealth">
+        <div class="card-meta"><span class="type-badge">Article</span><span class="ind-badge">Telehealth</span></div>
+        <p class="card-title">How to Set Boundaries at Work</p>
+        <p class="card-client">Cerebral</p>
+        <p class="card-blurb">Practical guidance on establishing healthy workplace boundaries, written for a mental health-focused audience.</p>
+        <a class="card-link" href="https://cerebral.com/blog/how-to-set-boundaries-at-work" target="_blank" rel="noopener">→ Read on Cerebral</a>
+      </div>
+
+      <!-- UX COPY -->
+      <div class="work-card" data-type="uxcopy" data-industry="telehealth">
+        <div class="card-meta"><span class="type-badge">UX Copy</span><span class="ind-badge">Telehealth</span></div>
+        <p class="card-title">Free Online Anxiety Test</p>
+        <p class="card-client">Cerebral</p>
+        <p class="card-blurb">A clinically-informed anxiety screening tool written to balance medical accuracy with calm, accessible language for patients seeking answers.</p>
+        <a class="card-link" href="https://cerebral.com/online/free-online-anxiety-test/" target="_blank" rel="noopener">→ View tool</a>
+      </div>
+
+      <div class="work-card" data-type="uxcopy" data-industry="telehealth">
+        <div class="card-meta"><span class="type-badge">UX Copy</span><span class="ind-badge">Telehealth</span></div>
+        <p class="card-title">Online ADHD Self-Test</p>
+        <p class="card-client">Cerebral</p>
+        <p class="card-blurb">An ADHD self-assessment tool designed to guide patients through a sensitive diagnostic journey with clarity and reassurance.</p>
+        <a class="card-link" href="https://cerebral.com/online/online-adhd-self-test/" target="_blank" rel="noopener">→ View tool</a>
+      </div>
+
+      <div class="work-card" data-type="uxcopy" data-industry="telehealth">
+        <div class="card-meta"><span class="type-badge">UX Copy</span><span class="ind-badge">Telehealth</span></div>
+        <p class="card-title">Free Online Depression Test</p>
+        <p class="card-client">Cerebral</p>
+        <p class="card-blurb">A depression screening tool written to meet patients where they are — empathetic, precise, and designed to reduce friction on a difficult path to care.</p>
+        <a class="card-link" href="https://cerebral.com/online/free-online-depression-test/" target="_blank" rel="noopener">→ View tool</a>
+      </div>
+
+      <div class="work-card" data-type="uxcopy" data-industry="telehealth">
+        <div class="card-meta"><span class="type-badge">UX Copy</span><span class="ind-badge">Telehealth</span></div>
+        <p class="card-title">Online Bipolar Disorder Screener</p>
+        <p class="card-client">Cerebral</p>
+        <p class="card-blurb">A bipolar disorder screening tool tackling one of mental health's most stigmatized diagnoses with careful, non-alarmist language.</p>
+        <a class="card-link" href="https://cerebral.com/online/online-bipolar-disorder-screener/" target="_blank" rel="noopener">→ View tool</a>
+      </div>
+
+      <div class="work-card" data-type="uxcopy" data-industry="erp">
+        <div class="card-meta"><span class="type-badge">UX Copy</span><span class="ind-badge">ERP / SaaS</span></div>
+        <p class="card-title">Microsoft Dynamics 365 Services Page</p>
+        <p class="card-client">Intellias</p>
+        <p class="card-blurb">Enterprise web copy positioning a global software engineering firm as a trusted Microsoft Dynamics 365 implementation partner.</p>
+        <a class="card-link" href="https://intellias.com/microsoft-dynamics-365-services/" target="_blank" rel="noopener">→ View page</a>
+      </div>
+
+      <!-- EMAIL -->
+      <div class="work-card" data-type="email" data-industry="telehealth">
+        <div class="card-meta"><span class="type-badge">Email</span><span class="ind-badge">Telehealth</span></div>
+        <p class="card-title">The Surprising Mental Health Benefit of Journaling</p>
+        <p class="card-client">Cerebral</p>
+        <p class="card-blurb">A marketing newsletter highlighting the mental health and immune benefits of journaling, with insurance eligibility guidance.</p>
+        <a class="card-link" href="https://drive.google.com/file/d/1JhXddpfhwvLfLOO79hNDoCVjOntjYt0S/view" target="_blank" rel="noopener">→ Read</a>
+      </div>
+
+      <div class="work-card" data-type="email" data-industry="telehealth">
+        <div class="card-meta"><span class="type-badge">Email</span><span class="ind-badge">Telehealth</span></div>
+        <p class="card-title">Navigating Social Anxiety: Tools and Strategies for Everyday Life</p>
+        <p class="card-client">Cerebral</p>
+        <p class="card-blurb">A consumer-focused email providing practical strategies and resources to help individuals tackle social anxiety.</p>
+        <a class="card-link" href="https://drive.google.com/file/d/1PTh_5V-vIawU-XAipT0Al6Uc_mlj21M5/view" target="_blank" rel="noopener">→ Read</a>
+      </div>
+
+      <div class="work-card" data-type="email" data-industry="telehealth">
+        <div class="card-meta"><span class="type-badge">Email</span><span class="ind-badge">Telehealth</span></div>
+        <p class="card-title">Food and Mood: How Your Summer Diet Impacts Serotonin</p>
+        <p class="card-client">Cerebral</p>
+        <p class="card-blurb">An informative newsletter on how seasonal diet and summer foods impact serotonin levels and anxiety symptoms.</p>
+        <a class="card-link" href="https://drive.google.com/file/d/1Y6Tt6gyNO2kPXQPg_w724q2ndmwmiFL8/view" target="_blank" rel="noopener">→ Read</a>
+      </div>
+
+      <!-- LONG FORM: CYBERSECURITY -->
+      <div class="work-card" data-type="longform" data-industry="cyber">
+        <div class="card-meta"><span class="type-badge">Long Form</span><span class="ind-badge">Cybersecurity</span></div>
+        <p class="card-title">Secure SD-WAN for Substation Automation: Redefining Utility Networks</p>
+        <p class="card-client">ANM</p>
+        <p class="card-blurb">A white paper exploring how utilities can bridge the gap between modern grid demands and legacy network capabilities using secure SD-WAN.</p>
+        <a class="card-link" href="https://drive.google.com/file/d/1qB7l5xkyAvNq9w5FwR-8GY0dxNbqUnAS/view" target="_blank" rel="noopener">→ Read</a>
+      </div>
+
+      <!-- LONG FORM: CLOUD -->
+      <div class="work-card" data-type="longform" data-industry="cloud">
+        <div class="card-meta"><span class="type-badge">Long Form</span><span class="ind-badge">Cloud</span></div>
+        <p class="card-title">Disaster Recovery as a Service (DRaaS) Comparison Guide</p>
+        <p class="card-client">US Signal</p>
+        <p class="card-blurb">A comprehensive guide evaluating cloud-based DRaaS solutions to help organizations secure business continuity without secondary data center overhead.</p>
+        <a class="card-link" href="https://drive.google.com/file/d/10TsfzQTH0DQQRqsKluLJuCDvkZExR3UP/view" target="_blank" rel="noopener">→ Read</a>
+      </div>
+
+      <div class="work-card" data-type="longform" data-industry="cloud">
+        <div class="card-meta"><span class="type-badge">Long Form</span><span class="ind-badge">Cloud</span></div>
+        <p class="card-title">Azure Data Storage Quickstart Guide 2025</p>
+        <p class="card-client">Microsoft Azure</p>
+        <p class="card-blurb">A comprehensive guide covering data collection strategies, storage options, and disaster recovery solutions across Azure Data Storage platforms.</p>
+        <a class="card-link" href="https://drive.google.com/file/d/1Yl9JPw53z1QYU_Mpkl02Je29RPKnKZbB/view" target="_blank" rel="noopener">→ Read</a>
+      </div>
+
+      <div class="work-card" data-type="longform" data-industry="cloud">
+        <div class="card-meta"><span class="type-badge">Long Form</span><span class="ind-badge">Cloud</span></div>
+        <p class="card-title">Cloud Mercato Benchmark Report: OpenCloud Performance Analysis</p>
+        <p class="card-client">US Signal</p>
+        <p class="card-blurb">An independent benchmark report evaluating the performance, scalability, and cost of leading cloud platforms alongside US Signal's OpenCloud.</p>
+        <a class="card-link" href="https://drive.google.com/file/d/1hE171bcixUWBmvm3JKIIDn3j_on3zbxK/view" target="_blank" rel="noopener">→ Read</a>
+      </div>
+
+      <!-- LONG FORM: IT MANAGEMENT -->
+      <div class="work-card" data-type="longform" data-industry="itm">
+        <div class="card-meta"><span class="type-badge">Long Form</span><span class="ind-badge">IT Management</span></div>
+        <p class="card-title">Shifting Left Across IT: How to Reduce Operational Costs and Improve Staff Retention</p>
+        <p class="card-client">Riverbed</p>
+        <p class="card-blurb">An eBook on how NetOps and Service Desk teams can implement DevOps "shift left" principles through unified observability and automated workflows.</p>
+        <a class="card-link" href="https://drive.google.com/file/d/1YMhPCsLU0v5VsA9J8WBGs9u2mmhCcre_/view" target="_blank" rel="noopener">→ Read</a>
+      </div>
+
+      <div class="work-card" data-type="longform" data-industry="itm">
+        <div class="card-meta"><span class="type-badge">Long Form</span><span class="ind-badge">IT Management</span></div>
+        <p class="card-title">Global Digital Employee Experience (DEX) Survey 2023</p>
+        <p class="card-client">Riverbed</p>
+        <p class="card-blurb">A global survey report from 1,800 business and IT leaders on shifting workplace trends, generational expectations, and DEX strategies.</p>
+        <a class="card-link" href="https://drive.google.com/file/d/1LkNGKlZH_yaKBMDVQHarB9InYRMIS0tv/view" target="_blank" rel="noopener">→ Read</a>
+      </div>
+
+      <div class="work-card" data-type="longform" data-industry="itm">
+        <div class="card-meta"><span class="type-badge">Long Form</span><span class="ind-badge">IT Management</span></div>
+        <p class="card-title">Automated Testing Traps: How Test Automation Causes Test Debt</p>
+        <p class="card-client">Mobot</p>
+        <p class="card-blurb">An eBook examining how over-reliance on automated QA testing unintentionally builds costly test debt and slows mobile app release cycles.</p>
+        <a class="card-link" href="https://drive.google.com/file/d/1ntHf289YLirYraun4MmhUswctCcb75_9/view" target="_blank" rel="noopener">→ Read</a>
+      </div>
+
+      <div class="work-card" data-type="longform" data-industry="itm">
+        <div class="card-meta"><span class="type-badge">Long Form</span><span class="ind-badge">IT Management</span></div>
+        <p class="card-title">The State of Deep Linking: A Mobile App Benchmark Report</p>
+        <p class="card-client">Mobot &amp; Branch</p>
+        <p class="card-blurb">A joint data-driven report analyzing mobile app deep-linking success rates and best practices across marketing channels, devices, and industries.</p>
+        <a class="card-link" href="https://drive.google.com/file/d/1_QiTTe5xqCDD8K_JJo1DW01u9YkfN6MR/view" target="_blank" rel="noopener">→ Read</a>
+      </div>
+
+      <!-- CASE STUDIES -->
+      <div class="work-card" data-type="casestudy" data-industry="erp">
+        <div class="card-meta"><span class="type-badge">Case Study</span><span class="ind-badge">ERP / SaaS</span></div>
+        <p class="card-title">IBM Migrates to SAP Business Suite Using Its Rapid Move Methodology</p>
+        <p class="card-client">ASUG · IBM</p>
+        <p class="card-blurb">A case study detailing how IBM leveraged its Rapid Move Methodology to migrate enterprise clients to SAP Business Suite.</p>
+        <a class="card-link" href="https://s3.us-east-1.amazonaws.com/asugv5-assets/archive/uploads/files/IBM-Migrates-to-the-SAP-Business-Suite-of-Solutions-Using-Its-Rapid-Move-Methodology.pdf" target="_blank" rel="noopener">→ Read</a>
+      </div>
+
+      <div class="work-card" data-type="casestudy" data-industry="cloud">
+        <div class="card-meta"><span class="type-badge">Case Study</span><span class="ind-badge">Cloud</span></div>
+        <p class="card-title">Architecting Resilience: Mastering Migration, Cloud Adoption, and Scalability in Regulated Industries</p>
+        <p class="card-client">HashiCorp</p>
+        <p class="card-blurb">Real-world case studies of major organizations that successfully navigated complex infrastructure migrations, cloud adoption, and secure scaling.</p>
+        <a class="card-link" href="https://drive.google.com/file/d/1eOBiGlhKRl3fmRINbl4BP7jRikM6Kdq8/view" target="_blank" rel="noopener">→ Read</a>
+      </div>
+
+      <!-- EDTECH -->
+      <div class="work-card" data-type="longform" data-industry="edtech">
+        <div class="card-meta"><span class="type-badge">Long Form</span><span class="ind-badge">EdTech</span></div>
+        <p class="card-title">The CAIO's Checklist for Building an AI-Ready Workforce</p>
+        <p class="card-client">Udemy</p>
+        <p class="card-blurb">A strategic checklist for enterprise leaders designed to align AI technical roadmaps with human talent upskilling across corporate divisions.</p>
+        <a class="card-link" href="https://drive.google.com/file/d/1KhTA3AIL0b-5sc6eyODgyrOUwNTwWrx9/view" target="_blank" rel="noopener">→ Read</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials">
+    <p class="section-label">Testimonials</p>
+    <div class="testimonials-grid">
+      <div class="tcard">
+        <span class="tquote-mark">"</span>
+        <!-- REPLACE with your real testimonial quote -->
+        <p class="tquote">Paste your first testimonial quote here when you have it.</p>
+        <!-- REPLACE with real name and role -->
+        <span class="tname">[Client Name]</span>
+        <span class="trole">[Title, Company]</span>
+      </div>
+      <div class="tcard">
+        <span class="tquote-mark">"</span>
+        <p class="tquote">Paste your second testimonial quote here when you have it.</p>
+        <span class="tname">[Client Name]</span>
+        <span class="trole">[Title, Company]</span>
+      </div>
+      <div class="tcard">
+        <span class="tquote-mark">"</span>
+        <p class="tquote">Paste your third testimonial quote here when you have it.</p>
+        <span class="tname">[Client Name]</span>
+        <span class="trole">[Title, Company]</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <p class="section-label">Contact</p>
+    <div class="contact-grid">
+      <div class="contact-left">
+        <h2>Got a story<br>that needs<br><em>telling?</em></h2>
+        <p>Whether you need a single white paper or a full content program, I'd love to hear what you're working on.</p>
+        <div class="avail-pills">
+          <span class="avail-pill">Available for contract</span>
+          <span class="avail-pill">Open to full-time remote</span>
+        </div>
+      </div>
+      <div class="contact-right">
+        <div class="contact-link" onclick="copyEmail(this)" role="button" tabindex="0" aria-label="Copy email address">
+          <span class="contact-link-icon">✉</span>
+          <div style="flex:1;">
+            <span class="contact-link-label">lawren.henderson [at] gmail.com</span>
+            <span class="contact-link-sub" id="email-sub">Click to copy email address</span>
+          </div>
+          <span style="font-size:13px; color:var(--ink-3);">⎘</span>
+        </div>
+        <a class="contact-link" href="https://linkedin.com/in/lawren-henderson" target="_blank" rel="noopener" aria-label="LinkedIn profile">
+          <span class="contact-link-icon">in</span>
+          <div>
+            <span class="contact-link-label">LinkedIn</span>
+            <span class="contact-link-sub">linkedin.com/in/lawren-henderson</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <span class="footer-copy">© 2026 Lawren Henderson · San Juan, Puerto Rico</span>
+    <span class="footer-copy">Content Strategist · Writer · Storyteller</span>
+  </footer>
+
+  <script>
+    // ── NAV SCROLL HIGHLIGHT ──
+    const sections = ['about', 'skills', 'work', 'testimonials', 'contact'];
+    const navLinks = document.querySelectorAll('.nav-links a[data-section]');
+
+    function updateNav() {
+      const scrollY = window.scrollY || document.documentElement.scrollTop;
+      let current = '';
+      sections.forEach(id => {
+        const el = document.getElementById(id);
+        if (el && el.offsetTop - 90 <= scrollY) current = id;
+      });
+      navLinks.forEach(link => {
+        link.classList.toggle('active', link.dataset.section === current);
+      });
+    }
+    window.addEventListener('scroll', updateNav, { passive: true });
+    updateNav();
+
+    // ── WORK FILTERS ──
+    let activeType = 'all';
+    let activeIndustry = 'all';
+
+    function filterCards() {
+      const cards = document.querySelectorAll('#work-grid .work-card');
+      let visible = 0;
+      cards.forEach(card => {
+        const typeMatch = activeType === 'all' || card.dataset.type === activeType;
+        const indMatch = activeIndustry === 'all' || card.dataset.industry === activeIndustry;
+        const show = typeMatch && indMatch;
+        card.style.display = show ? '' : 'none';
+        if (show) visible++;
+      });
+      const countEl = document.getElementById('card-count');
+      countEl.textContent = visible + ' piece' + (visible !== 1 ? 's' : '');
+      let noRes = document.getElementById('no-results');
+      if (visible === 0) {
+        if (!noRes) {
+          noRes = document.createElement('p');
+          noRes.id = 'no-results';
+          noRes.className = 'no-results';
+          noRes.textContent = 'No work samples match this combination yet.';
+          document.getElementById('work-grid').appendChild(noRes);
+        }
+      } else if (noRes) {
+        noRes.remove();
+      }
+    }
+
+    document.getElementById('type-tags').addEventListener('click', e => {
+      const tag = e.target.closest('.tag');
+      if (!tag) return;
+      document.querySelectorAll('#type-tags .tag').forEach(t => t.classList.remove('active'));
+      tag.classList.add('active');
+      activeType = tag.dataset.type;
+      filterCards();
+    });
+
+    document.getElementById('industry-tags').addEventListener('click', e => {
+      const tag = e.target.closest('.tag');
+      if (!tag) return;
+      document.querySelectorAll('#industry-tags .tag').forEach(t => t.classList.remove('active'));
+      tag.classList.add('active');
+      activeIndustry = tag.dataset.industry;
+      filterCards();
+    });
+
+    filterCards();
+
+    // ── EMAIL COPY ──
+    function copyEmail(el) {
+      navigator.clipboard.writeText('lawren.henderson@gmail.com').then(() => {
+        const sub = document.getElementById('email-sub');
+        sub.textContent = 'Copied to clipboard!';
+        sub.style.color = 'var(--tc)';
+        setTimeout(() => {
+          sub.textContent = 'Click to copy email address';
+          sub.style.color = '';
+        }, 2500);
+      }).catch(() => {
+        // Fallback for browsers that block clipboard
+        const sub = document.getElementById('email-sub');
+        sub.textContent = 'lawren.henderson@gmail.com';
+      });
+    }
+  </script>
+
+</body>
+</html>
